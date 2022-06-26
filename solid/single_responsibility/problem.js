@@ -1,3 +1,6 @@
+//class should have one reason to change / one responsibility
+// reason of change should be related to te this responsibility
+
 class Journal {
   constructor() {
     this.entries = {};
@@ -17,6 +20,20 @@ class Journal {
 
   toString() {
     return Object.values(this.entries).join("\n");
+  }
+
+  saveToFile(filename) {
+    // fs save implimentation
+  }
+  saveByUrl(url) {
+    // save by url save implimentation
+  }
+
+  loadFormFile(filename) {
+    //  load fs implimentation
+  }
+  loadFormUrl(url) {
+    // load by url  implimentation
   }
 }
 
