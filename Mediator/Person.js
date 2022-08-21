@@ -9,4 +9,13 @@ class Person {
     this.chatLog.push(log);
     console.log(`[${this.name}'s chat session]  ${log}`);
   }
+
+  messageToAll(message) {
+    this.room.broadcast(this.name, message);
+  }
+  privateMessage(destination, message) {
+    this.room.message(this.name, destination, message);
+  }
 }
+
+module.exports = Person;

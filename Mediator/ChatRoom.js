@@ -17,4 +17,14 @@ class ChatRoom {
       }
     }
   }
+
+  message(source, destination, message) {
+    for (let p of this.people) {
+      if (p.name === destination) {
+        p.receive(source, message);
+      }
+    }
+  }
 }
+
+module.exports = ChatRoom;
